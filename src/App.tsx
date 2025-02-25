@@ -1,13 +1,14 @@
-//import (lo que quieres importar) from 'react'
-
-import './App.css'
-import BarraNavegacion from './components/navbar/Navbar'
-
+import './App.css';
+import Navbar from './components/navbar/Navbar';
+import Slider from './components/slider/Slider';
 
 function App() {
-  return(
-    <BarraNavegacion/>
-)
+  return (
+    <div>
+      <Navbar />
+      <Slider/>
+    </div>
+  );
 }
 
-export default App
+export default App;
