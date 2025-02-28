@@ -1,48 +1,52 @@
 .slider-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: -298px; /* Ajuste para que no se solape con el Navbar */
     position: relative;
-    width: 80%;
-    margin: auto;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 500px; /* Altura del contenedor del slider */
 }
 
 .slider {
     display: flex;
-    width: 300%; /* 100% por cada imagen */
     transition: transform 0.5s ease-in-out;
+    height: 100%; /* Hereda la altura del contenedor */
 }
 
 .slide {
     min-width: 100%;
-    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Hereda la altura del contenedor */
 }
 
 .slide img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
+    max-width: 100%;
+    height: 100%; /* Ajusta la imagen al 100% de la altura del slide */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+    border-radius: 10px; /* Opcional, si quieres bordes redondeados */
 }
-
-/* Botones de navegación */
-.prev, .next {
+  
+  /* Botones de navegación */
+  .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 24px;
-    border-radius: 50%;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+    font-size: 18px;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
